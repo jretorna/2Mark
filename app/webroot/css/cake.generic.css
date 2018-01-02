@@ -72,6 +72,12 @@ p {
 	margin: 0 0 1em 0;
 }
 
+.viewView{
+	padding:10px;
+	background:#f4f4f4;
+	width: 30%;
+}
+
 /** Layout **/
 #container {
 	text-align: left;

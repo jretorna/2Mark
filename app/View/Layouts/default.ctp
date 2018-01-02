@@ -15,6 +15,7 @@
  */
 
 $header = __d('cake_dev', '<b>2MARK</b> - Manage your students');
+$title = '2MARK';
 $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version());
 $developer = __('Jeremy RETORNAZ - 2017/2018');
 ?>
@@ -23,7 +24,7 @@ $developer = __('Jeremy RETORNAZ - 2017/2018');
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php echo $header ?>:
+		<?php echo $title ?>:
 		<?php echo $this->fetch('title'); ?>
 	</title>
 	<?php

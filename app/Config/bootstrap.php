@@ -22,6 +22,8 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 
+CakePlugin::loadAll();
+
 // Setup a 'default' cache configuration for use in the application.
 Cache::config('default', array('engine' => 'File'));
 

@@ -1,6 +1,7 @@
 <?php
 class StudentsController extends AppController {
     public $helpers = array('Html', 'Form');
+    public $uses = array('Student', 'Mark');
 
     public function index() {
         $this->set('students', $this->Student->find('all'));
@@ -14,16 +15,18 @@ class StudentsController extends AppController {
         if(!$student){
             throw new NotFoundException(__('unknown student'));
         }
+        $marks = $this->Mark->findByStudentId($id);
         $this->set('student',$student);
+        $this->set('marks', $marks);
     }
 
     public function add(){
         if($this->request->is('post')){
             $this->Student->create();
             $data = $this->request->data;
-            $data['created'] = date('y-m-d');
+            $data['Student']['created'] = date('y-m-d');
 
-            if($this->Student->save($this->request->data)) {
+            if($this->Student->save($data)) {
                 $this->Flash->success(__('Nouvel(le) étudiant(e) créé(e)'));
                 return $this->redirect(array('action' => 'index'));
             }
