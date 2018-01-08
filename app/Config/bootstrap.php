@@ -22,6 +22,8 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 
+CakePlugin::loadAll();
+
 // Setup a 'default' cache configuration for use in the application.
 Cache::config('default', array('engine' => 'File'));
 
@@ -109,3 +111,5 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
+
+setlocale(LC_ALL, 'fr_fr');

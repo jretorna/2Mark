@@ -22,7 +22,7 @@
 
 /** General Style Info **/
 body {
-	background: #003d4c;
+	background: #424242;
 	color: #fff;
 	font-family:'lucida grande',verdana,helvetica,arial,sans-serif;
 	font-size:90%;
@@ -46,14 +46,15 @@ h1, h2, h3, h4 {
 }
 h1 {
 	background:#fff;
-	color: #003d4c;
+	color: #0D0D0D;
 	font-size: 100%;
 }
 h2 {
 	background:#fff;
-	color: #e32;
+	color: #0D0D0D;
 	font-family:'Gill Sans','lucida grande', helvetica, arial, sans-serif;
 	font-size: 190%;
+	font-weight: bold;
 }
 h3 {
 	color: #2c6877;
@@ -71,6 +72,12 @@ p {
 	margin: 0 0 1em 0;
 }
 
+.viewView{
+	padding:10px;
+	background:#f4f4f4;
+	width: 30%;
+}
+
 /** Layout **/
 #container {
 	text-align: left;
@@ -81,7 +88,7 @@ p {
 }
 #header h1 {
 	line-height:20px;
-	background: #003d4c url('../img/cake.icon.png') no-repeat left;
+	background: #424242 url('../img/ic_school.png') no-repeat left;
 	color: #fff;
 	padding: 0 30px;
 }
@@ -261,6 +268,7 @@ dd {
 form {
 	clear: both;
 	margin-right: 20px;
+	margin-left: -8px;
 	padding: 0;
 	width: 95%;
 }
@@ -315,10 +323,12 @@ label {
 }
 input, textarea {
 	clear: both;
-	font-size: 140%;
+	font-size: 100%;
 	font-family: "frutiger linotype", "lucida grande", "verdana", sans-serif;
 	padding: 1%;
-	width:98%;
+	width:50%;
+	height:50px;
+	resize:none;
 }
 select {
 	clear: both;
