@@ -15,9 +15,9 @@ class StudentsController extends AppController {
         if(!$student){
             throw new NotFoundException(__('unknown student'));
         }
-        $marks = $this->Mark->findByStudentId($id);
+        //$marks = $this->Mark->findByStudentId($id);
         $this->set('student',$student);
-        $this->set('marks', $marks);
+        //$this->set('marks', $marks);
     }
 
     public function add(){
@@ -63,12 +63,16 @@ class StudentsController extends AppController {
             throw new MethodNotAllowedException();
         }
 
-        if($this->Student->delete($id)) {
+        // if(!$this->Mark->deleteByStudentId($id)){
+        //     $this->Flash->error(__('Impossible de supprimer l\'étudiant(e)'));
+        //     return $this->redirect(array('action' => 'index'));
+        // }
+
+        if($this->Student->delete($id, true)) {
             $this->Flash->success(__('L\'étudiant(e) a été supprimé(e)')
         );
         } else {
-            $this->Flash->error(__('Impossible de supprimer l\'étudiant(e)')
-        );
+            $this->Flash->error(__('Impossible de supprimer l\'étudiant(e)'));
         }
 
         return $this->redirect(array('action' => 'index'));

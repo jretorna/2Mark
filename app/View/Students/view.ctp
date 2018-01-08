@@ -1,6 +1,7 @@
 <?php
 echo $this->Html->css(array('bootstrap.min','/app/webroot/css/cake.generic'));
 $currentStudent = $student['Student'];
+$marks = $student['Mark'];
 ?>
 
 <h2><?php
@@ -34,10 +35,10 @@ if(!empty($marks)){?>
         </tr>
 <?php foreach ($marks as $mark) :?>
     <tr>
-        <td><?php echo $mark['Mark']['id']; ?></td>
-        <td><?php echo $mark['Mark']['subject']; ?></td>
-        <td><?php echo $mark['Mark']['mark']; ?></td>
-        <td><?php echo date("d/m/Y", strtotime($mark['Mark']['created'])); ?></td>
+        <td><?php echo $mark['id']; ?></td>
+        <td><?php echo $mark['subject']; ?></td>
+        <td><?php echo $mark['mark']; ?></td>
+        <td><?php echo date("d/m/Y", strtotime($mark['created'])); ?></td>
     </tr>
 <?php endforeach; ?>
 <?php unset($student); ?>

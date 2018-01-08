@@ -4,6 +4,8 @@
 class Mark extends AppModel {
     public $name = 'Mark';
 
+    public $belongsTo = 'Student';
+
     public $validate = array(
         'subject' => array(
             'rule' => 'notBlank',
@@ -29,8 +31,7 @@ class Mark extends AppModel {
     }
 
     public function isValidMark($mark) {
-        $markInt = (int) $mark;
-        pr($markInt);
+        $markInt = $mark['mark'];
         return $markInt >= 0 && $markInt <=20;
     }
 }

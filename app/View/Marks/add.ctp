@@ -11,4 +11,3 @@ echo $this->Form->input('mark', array('label' => 'Note : '));
 echo $this->Form->input('studentId', array('type' => 'hidden'));
 echo $this->Form->input('created', array('type' => 'hidden'));
 echo $this->Form->end('Ajouter');?>
-<!-- <a href="javascript:history.back(1)">Retour</a> -->
