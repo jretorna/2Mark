@@ -1,8 +1,6 @@
 <h2>Ajouter une nouvelle note</h2>
 
-<?php
- echo $this->Html->css(array('bootstrap.min','/app/webroot/css/cake.generic'));
-?>
+<?php echo $this->Html->css(array('bootstrap.min','/app/webroot/css/cake.generic')); ?>
 
 <?php
 echo $this->Form->create('Mark');

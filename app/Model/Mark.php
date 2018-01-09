@@ -1,11 +1,8 @@
 <?php
 
-//App::uses('AppModel', 'App.Model');
 class Mark extends AppModel {
     public $name = 'Mark';
-
     public $belongsTo = 'Student';
-
     public $validate = array(
         'subject' => array(
             'rule' => 'notBlank',
@@ -18,20 +15,7 @@ class Mark extends AppModel {
         ),
     );
 
-    public function findByStudentId($studentId = null){
-        return $this->find('all', array(
-            'conditions' => array(
-                'Mark.studentId' => $studentId,
-            ),
-            'order'      => array(
-                'Mark.created DESC'
-            ),
-        ));
-        return $marks;
-    }
-
     public function isValidMark($mark) {
-        $markInt = $mark['mark'];
-        return $markInt >= 0 && $markInt <=20;
+        return $mark['mark'] >= 0 && $mark['mark'] <=20;
     }
 }

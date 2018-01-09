@@ -1,4 +1,5 @@
 <?php
+
 class Student extends AppModel {
     public $hasMany = array(
         'Mark' => array(
